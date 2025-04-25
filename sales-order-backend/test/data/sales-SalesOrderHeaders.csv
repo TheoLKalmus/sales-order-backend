@@ -1,0 +1,11 @@
+id,customer_id,totalAmount,createdAt,createdBy,modifiedAt,modifiedBy
+3869089e-2578-4324-a79c-6390fe31198d,27718318-eebe-4bad-8d14-e51dc5b2230d,14317948.3,2014-12-04T03:00:00.000Z,createdBy.2axep@example.com,2013-03-30T03:00:00.000Z,modifiedBy.2axep@example.com
+3869090a-d1f6-4694-b496-79a63c56f5ee,27718318-eebe-4bad-8d14-e51dc5b2230d,19511754.22,2014-06-30T03:00:00.000Z,createdBy.2axeq@example.org,2011-09-12T03:00:00.000Z,modifiedBy.2axeq@example.net
+38690912-a8ee-4f6c-bde4-afda43cf825b,27718318-eebe-4bad-8d14-e51dc5b2230d,18596731.26,2005-01-07T03:00:00.000Z,createdBy.2axer@example.com,2003-08-20T03:00:00.000Z,modifiedBy.2axer@example.org
+38690922-3292-4b97-b9e6-b8fe2961ce85,27718318-eebe-4bad-8d14-e51dc5b2230d,28942514.31,2006-01-16T03:00:00.000Z,createdBy.2axes@example.net,2004-03-23T03:00:00.000Z,modifiedBy.2axes@example.com
+3869093d-8f6d-43e6-b123-3158a0732eab,27718318-eebe-4bad-8d14-e51dc5b2230d,23256370.13,2005-06-04T03:00:00.000Z,createdBy.2axet@example.net,2011-06-08T03:00:00.000Z,modifiedBy.2axet@example.net
+38690940-4137-40c7-b8d6-6e58bb25b360,27718318-eebe-4bad-8d14-e51dc5b2230d,27934997.25,2018-10-06T03:00:00.000Z,createdBy.2axeu@example.com,2003-08-16T03:00:00.000Z,modifiedBy.2axeu@example.org
+38690951-d161-42c3-b91d-b2a6685e482b,27718318-eebe-4bad-8d14-e51dc5b2230d,5568307.11,2014-09-24T03:00:00.000Z,createdBy.2axev@example.net,2010-01-04T03:00:00.000Z,modifiedBy.2axev@example.org
+38690964-e0ae-45c7-aff6-a704d5766de6,27718318-eebe-4bad-8d14-e51dc5b2230d,19168975.22,2020-12-19T03:00:00.000Z,createdBy.2axew@example.com,2000-09-15T03:00:00.000Z,modifiedBy.2axew@example.net
+38690976-bd25-4ae4-93de-a347288fb74e,27718318-eebe-4bad-8d14-e51dc5b2230d,15196080.51,2001-05-19T03:00:00.000Z,createdBy.2axex@example.com,2016-04-30T03:00:00.000Z,modifiedBy.2axex@example.org
+38690983-922d-4cc7-a2e0-0184d7341593,27718318-eebe-4bad-8d14-e51dc5b2230d,22903113.28,2001-07-15T03:00:00.000Z,createdBy.2axey@example.com,2003-01-24T03:00:00.000Z,modifiedBy.2axey@example.com
