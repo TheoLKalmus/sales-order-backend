@@ -1,0 +1,52 @@
+@localHost=localhost:4004/odata/v4/main
+@id=967a2735-47af-44cb-a4b0-3200af9cf711
+
+@customerId=8fb63383-da78-4c72-ad3b-1a90e0fc5549
+
+@productId=ea5ea1ec-08b8-401f-b914-3bae56edd709
+
+
+GET http://localhost:4004/odata/v4/main/SalesOrderHeaders?$filter=id eq {{id}}&expand=items
+Content-Type: application/json
+
+###
+
+POST http://localhost:4004/odata/v4/main/SalesOrderHeaders
+Content-Type: application/json
+
+{
+    "id": "{{id}}",
+    "customer_id": "{{customerId}}",
+    "totalAmount": 398,
+    "items": [
+        {
+            "id": "8fb66a13-4dff-409d-9acb-80e3b79d66c7",
+            "header_id": "{{id}}",
+            "product_id": "{{productId}}",
+            "quantity": 10,
+            "price": 2.99
+        },
+        {
+            "id": "12330468-6324-4155-8e3d-4bb27317deb5",
+            "header_id": "{{id}}",
+            "product_id": "{{productId}}",
+            "quantity": 10,
+            "price": 3.99
+        }
+    ]
+
+}
+
+###
+
+DELETE http://localhost:4004/odata/v4/main/SalesOrderHeaders(id=003c4b20-d11e-41e1-9d24-45acdbe301c2)
+Content-Type: application/json
+
+###
+
+PUT http://localhost:4004/odata/v4/main/SalesOrderHeaders(id=f77271aa-97ef-4434-bcc9-e00dff2e19a9)
+Content-Type: application/json
+
+{
+    "modifiedBy": "teste"
+}

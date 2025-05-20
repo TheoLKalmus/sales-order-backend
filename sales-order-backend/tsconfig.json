@@ -8,9 +8,13 @@
     "noImplicitAny": true,
     "esModuleInterop": false,
     "outDir": "./dist",
-    "baseUrl": "./srv",
-    "rootDir": "./"
+    "baseUrl": ".",               // Corrigido aqui
+    "rootDir": "./",
+    "paths": {
+      "@models/*": ["@cds-models/*/index.ts"],
+      "@cds-models/*": ["@cds-models/*"]
+    }
   },
-  "include": ["srv"],
+  "include": ["srv", "@cds-models"],
   "exclude": ["node_modules"]
 }
