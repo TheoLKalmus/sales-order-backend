@@ -1,52 +1,63 @@
-@localHost=localhost:4004/odata/v4/main
-@id=967a2735-47af-44cb-a4b0-3200af9cf711
+@localHost = http://localhost:4004/odata/v4/main
+@id = 967a2735-47af-44cb-a4b0-3200af9cf711
+@customerId = 16468260-3d78-4a17-9394-9bc674fa7c5d
 
-@customerId=8fb63383-da78-4c72-ad3b-1a90e0fc5549
+#produto sem estoque
+@productId1 = 10764058-e166-4c6b-a919-c4c3b9ee0253
+#produto com estoque
+@productId2 = 25139790-9bb2-4a01-8d90-697989bf5b16
 
-@productId=ea5ea1ec-08b8-401f-b914-3bae56edd709
+# Base64 de "cuka:Inicial@12345"
+@authHeader = Basic Y3VrYTpJbmljaWFsQDEyMzQ1
 
-
-GET http://localhost:4004/odata/v4/main/SalesOrderHeaders?$filter=id eq {{id}}&expand=items
+### GET com autenticação
+GET {{localHost}}/SalesOrderHeaders?$filter=id eq {{id}}&expand=items
+Authorization: {{authHeader}}
 Content-Type: application/json
 
 ###
 
-POST http://localhost:4004/odata/v4/main/SalesOrderHeaders
+### POST com autenticação
+POST {{localHost}}/SalesOrderHeaders
+Authorization: {{authHeader}}
 Content-Type: application/json
 
 {
-    "id": "{{id}}",
-    "customer_id": "{{customerId}}",
-    "totalAmount": 398,
-    "items": [
-        {
-            "id": "8fb66a13-4dff-409d-9acb-80e3b79d66c7",
-            "header_id": "{{id}}",
-            "product_id": "{{productId}}",
-            "quantity": 10,
-            "price": 2.99
-        },
-        {
-            "id": "12330468-6324-4155-8e3d-4bb27317deb5",
-            "header_id": "{{id}}",
-            "product_id": "{{productId}}",
-            "quantity": 10,
-            "price": 3.99
-        }
-    ]
-
+  "id": "{{id}}",
+  "customer_id": "{{customerId}}",
+  "totalAmount": 398,
+  "items": [
+    {
+      "id": "8fb66a13-4dff-409d-9acb-80e3b79d66c7",
+      "header_id": "{{id}}",
+      "product_id": "{{productId1}}",
+      "quantity": 10,
+      "price": 1000
+    },
+    {
+      "id": "12330468-6324-4155-8e3d-4bb27317deb5",
+      "header_id": "{{id}}",
+      "product_id": "{{productId2}}",
+      "quantity": 10,
+      "price": 5000
+    }
+  ]
 }
 
 ###
 
-DELETE http://localhost:4004/odata/v4/main/SalesOrderHeaders(id=003c4b20-d11e-41e1-9d24-45acdbe301c2)
+### DELETE com autenticação
+DELETE {{localHost}}/SalesOrderHeaders(id=003c4b20-d11e-41e1-9d24-45acdbe301c2)
+Authorization: {{authHeader}}
 Content-Type: application/json
 
 ###
 
-PUT http://localhost:4004/odata/v4/main/SalesOrderHeaders(id=f77271aa-97ef-4434-bcc9-e00dff2e19a9)
+### PUT com autenticação
+PUT {{localHost}}/SalesOrderHeaders(id=f77271aa-97ef-4434-bcc9-e00dff2e19a9)
+Authorization: {{authHeader}}
 Content-Type: application/json
 
 {
-    "modifiedBy": "teste"
+  "modifiedBy": "teste"
 }
